@@ -1,24 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
+    <meta charset="UTF-8">
     <title>Meeting Minutes</title>
     <meta name="author" content="David Wang">
-    <link rel="icon" type="image/png" sizes="512x512" href="/assets/android-chrome-512x512.png">
-  </head>
-  <body>
-    <nav>
-        <ol>
-          <li> <a href="https://www.youtube.com/watch?v=uHgt8giw1LY">Main Page</a></li>
-          <li> <a href="https://www.youtube.com/watch?v=uHgt8giw1LY">Contact Us</a></li>
-          <li> Meeting Minutes </li>
+    <link rel="icon" href="/assets/android-chrome-512x512.png" sizes="512x512" type="image/png">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Internal CSS for example */
+        .meeting-summary {
+            background-color: #e0ffff; /* Light cyan background */
+            padding: 10px;
+            border-left: 5px solid #333; /* Dark grey border */
+        }
+    </style>
+</head>
+<body style="font-family: Arial, sans-serif; margin: 0; background-color: #dff6cf;">
+    <nav id="main-nav" style="background-color: #f0f0f0; padding: 10px;">
+        <ol class="nav-list">
+            <li><a href="https://www.youtube.com/watch?v=uHgt8giw1LY" style="color: #007bff; text-decoration: none;">Main Page</a></li>
+            <li><a href="https://www.youtube.com/watch?v=uHgt8giw1LY" style="color: #007bff; text-decoration: none;">Contact Us</a></li>
+            <li class="active" style="font-weight: bold;">Meeting Minutes</li>
         </ol>
     </nav>
-    <header> Meeting Minutes </header>
+    <header class="page-header">Meeting Minutes</header>
     <main>
-        <div>
-            <h1> Dealing with CSE 110 </h1>
-            <h3> April 1, 2024 </h3>
-            <section>
+        <div class="meeting-details">
+            <h1 id="meeting-title">Dealing with CSE 110</h1>
+            <h3 class="date">April 1, 2024</h3>
+            <section class="agenda">
                 <h2>Agenda</h2>
                 <ul>
                     <li>Introductions</li>
@@ -26,116 +36,113 @@
                     <li>Countermeasures</li>
                 </ul>
             </section>
-            <section>
-                <h2> Attendees </h2>
+            <section class="attendees">
+                <h2>Attendees</h2>
                 <ul>
-                    <li> David <span>Wang</span> </li>
-                    <li> Anakin <span>Skywalker</span> </li>
-                    <li> Dwayne <span>Johnson</span></li>
+                    <li>David <span>Wang</span></li>
+                    <li>Anakin <span>Skywalker</span></li>
+                    <li>Dwayne <span>Johnson</span></li>
                 </ul>
-                <h3> Expected, but did not show up </h3>
+                <h3>Expected, but did not show up</h3>
                 <ul>
-                    <li> Jeff Bezos </li>
+                    <li>Jeff Bezos</li>
                 </ul>
-            <section>
+            </section>
+            <section class="unfinished">
                 <h2>Unfinished from Last Time</h2>
                 <ul>
                     <li>Who is The Rock?</li>
                 </ul>
             </section>
-            </section>
         </div>
         <hr />
-        <p>
+        <p class="meeting-summary">
             The meeting was held at <b>Stark Tower</b>, inside conference room 1234. The goals for this meeting
-            were to address the sudden threat posed by UCSD course <strong> CSE 110: Software Engineering, </strong> 
+            were to address the sudden threat posed by UCSD course <strong>CSE 110: Software Engineering</strong>,
             often mistakenly referred to as <i>code monkey bootcamp</i>.
         </p>
         <hr />
-        <section>
-            <h2> Notes </h2>
+        <section class="notes">
+            <h2>Notes</h2>
             <ul>
-                <li> Countermeasures are currently being implemented to prepare. 
-                    This includes weapons of otherworldly caliber, like the one depicted here. <br/>
-                    <img src = "assets/611bc1cb1edf660001797f4b-image_a7334b50.jpeg" alt = "A weapon of otherworldly caliber" width="500"/>
+                <li>Countermeasures are currently being implemented to prepare. This includes weapons of otherworldly caliber, like the one depicted here.<br/>
+                    <img src="assets/611bc1cb1edf660001797f4b-image_a7334b50.jpeg" alt="A weapon of otherworldly caliber" width="500"/>
                 </li>
-                <li> Fortunately, our scientists have discovered that the people of CSE 110 are usually computer science majors and very afraid of the sound of rushing water </li>
-                <li> Anakin has great hair. </li>
-
+                <li>Fortunately, our scientists have discovered that the people of CSE 110 are usually computer science majors and very afraid of the sound of rushing water</li>
+                <li>Anakin has great hair.</li>
             </ul>
         </section>
-        <section>
+        <section class="recordings">
             <h2>Meeting Recordings</h2>
             <video controls src="assets/Fireball_1_2kres.mp4" width="500">Recording</video> <br />
             <audio controls src="assets/Shower-Faucet-Showering-00-c-FesliyanStudios.com.mp3">Shower</audio>
         </section>
-    <hr />
-    <section>
-        <h2> Next Steps</h2>
+        <hr/>
+        <section class="next-steps">
+            <h2>Next Steps</h2>
             <ul>
                 <li>Implement GROSSE Protocol</li>
             </ul>
             <details>
-                <summary> Details </summary>
+                <summary>Details</summary>
                 Get Rid Of Subpar Software Engineers
             </details>
-    </section>
-    <hr />
-    <section>
-        <h2>Contribute</h2>
-        <p>
-            Please feel free to contribute your ideas!
-        </p>
-        <form>
-            <fieldset>
-                <legend> Basic Info </legend>
-                <label>Name</label> <br />
-                <input type ="text" /> <br />
-                <label>Verify that you are not the enemy</label> <br />
-                <input type = "checkbox" />
-                <label>I am not a software engineer</label><br />
-                <input type = "date"/>
+        </section>
+        <hr/>
+        <section class="contribute">
+            <h2>Contribute</h2>
+            <p>Please feel free to contribute your ideas!</p>
+            <form class="contribution-form">
+            
+                <fieldset>
+                    <legend> Basic Info </legend>
+                    <label>Name</label> <br />
+                    <input type ="text" /> <br />
+                    <label>Verify that you are not the enemy</label> <br />
+                    <input type = "checkbox" />
+                    <label>I am not a software engineer</label><br />
+                    <input type = "date"/>
+                    
+                </fieldset>
+                <fieldset class="multiple-choice">
+                    <legend> Bigger Threat (Opinion) </legend>
                 
-            </fieldset>
-            <fieldset>
-                <legend> Bigger Threat (Opinion) </legend>
-            
-                <input type="radio" name="threat" />
-                <label>CSE 110</label><br />
-            
-                <input type="radio" name="threat" />
-                <label>CSE 151A</label><br />
-            
-                <input type="radio" name="threat"/>
-                <label>ECE 175A</label>
-            </fieldset>
-            <fieldset>
-                <legend> More Thoughts</legend>
-                <textarea> CSE 110 is bad/good because...</textarea> <br />
-                <label>Favorite Programming Language:</label> <br />
-                <input list="language"/>
-                <datalist id="language">
-                <option value="Python"></option>
-                <option value="Java"></option>
-                <option value="C++"></option>
-                </datalist> <br />
-                <label> Best Lightsaber Color: </label> <br />
-                <select>
-                <option value="">--Please choose an option--</option>
-                <option value="purple">Purple</option>
-                <option value="blue">Blue</option>
-                <option value="red">Red</option>
-                <option value="green">Green</option>
-                <option value="yellow">Yellow</option>
-                </select>
-
-            </fieldset>
-            <fieldset>
-                <button>Submit</button>
-            </fieldset>
-        </form>
-    </section>
+                    <input type="radio" name="threat" />
+                    <label>CSE 110</label><br />
+                
+                    <input type="radio" name="threat" />
+                    <label>CSE 151A</label><br />
+                
+                    <input type="radio" name="threat"/>
+                    <label>ECE 175A</label>
+                </fieldset>
+                <fieldset>
+                    <legend> More Thoughts</legend>
+                    <textarea> CSE 110 is bad/good because...</textarea> <br />
+                    <label>Favorite Programming Language:</label> <br />
+                    <input list="language"/>
+                    <datalist id="language">
+                    <option value="Python"></option>
+                    <option value="Java"></option>
+                    <option value="C++"></option>
+                    </datalist> <br />
+                    <label> Best Lightsaber Color: </label> <br />
+                    <select>
+                    <option value="">--Please choose an option--</option>
+                    <option value="purple">Purple</option>
+                    <option value="blue">Blue</option>
+                    <option value="red">Red</option>
+                    <option value="green">Green</option>
+                    <option value="yellow">Yellow</option>
+                    </select>
+    
+                </fieldset>
+                <fieldset>
+                    <button>Submit</button>
+                </fieldset>
+            </form>
+        </section>
     </main>
-    <footer> Copyright © 2024 David Wang.  </footer>
-  </body>
+    <footer class="main-footer">Copyright © 2024 David Wang.</footer>
+</body>
 </html>
