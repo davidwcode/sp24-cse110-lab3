@@ -7,7 +7,7 @@
 body {
     font-family: 'Roboto', sans-serif;
     background-color: hsl(210, 50%, 98%);
-    color: hsl(210, 10%, 20%);
+    color: hsla(210, 10%, 20%, 0.5);
 }
 
 /* Navigation */
@@ -46,7 +46,7 @@ p {
     background-color: rgba(0, 123, 255, 0.1);
     text-align: center;
     padding: 20px 0px 10px 10px;
-    border-color: 3px solid rgb(50, 149, 255);
+    border-color: rgb(50, 149, 255);
     border-style: dotted;
     border-width: 10px;
     border-radius: 50px;
@@ -76,7 +76,7 @@ a[href*="youtube"] {
 .agenda, .attendees, .notes {
     display: flex;
     flex-direction: column;
-    color: color(display-p3 2 0.5 0.5);
+    color: color(srgb 2 0.5 0.5);
     font-size: 1.5em;
 }
 
@@ -84,8 +84,8 @@ a[href*="youtube"] {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    color: color-mix(in srgb, blue 75%, white);
-    position: flex;
+    color: color-mix(srgb, blue 75%, white);
+    position: sticky;
 }
 
 
@@ -135,7 +135,7 @@ body {
 
 /* Applying new CSS selectors */
 footer:hover {
-    background-color: color-mix(in srgb, red 50%, blue 50%);
+    background-color: rgb(255, 50, 252)
 }
 
 /* Grid */
@@ -190,7 +190,7 @@ section:has(details) {
 .meeting-details {
     /* parent rule properties */
     background-color: whitesmoke;
-    .date {
+    & .date {
         /* child rule properties */
         color: rgb(34, 201, 238);
     }
