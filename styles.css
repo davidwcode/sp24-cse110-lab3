@@ -1,0 +1,197 @@
+/* Base Styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: hsl(210, 50%, 98%);
+    color: hsl(210, 10%, 20%);
+}
+
+/* Navigation */
+#main-nav {
+    background-color: rgb(255, 255, 255);
+    padding: 1rem;
+    height: 100px;
+    min-width: 50px;
+}
+.nav-list li {
+    display: inline-block;
+    margin-right: 20px;
+}
+.nav-list li a:hover {
+    text-decoration: underline;
+}
+
+/* text */
+p {
+    color:rgb(255, 50, 252);
+    text-decoration: underline;
+    text-align: center;
+}
+
+/* flex */
+.multiple-choice {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: flex-start;
+
+}
+
+/* Header */
+.page-header {
+    background-color: rgba(0, 123, 255, 0.1);
+    text-align: center;
+    padding: 20px 0px 10px 10px;
+    border-color: 3px solid rgb(50, 149, 255);
+    border-style: dotted;
+    border-width: 10px;
+    border-radius: 50px;
+}
+
+/* Attribute */
+a[href*="youtube"] {
+    font-size: 2em;
+}
+
+/* Main Content */
+.meeting-details {
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border: 5px solid #b700ff; /* Example of using hex */
+}
+
+/* Meeting title */
+#meeting-title {
+    font-size: 2rem;
+    margin: 10px 10px 100px 10px;
+}
+
+/* Flexbox Layout */
+.agenda, .attendees, .notes {
+    display: flex;
+    flex-direction: column;
+    color: color(display-p3 2 0.5 0.5);
+    font-size: 1.5em;
+}
+
+.agenda ul, .attendees ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    color: color-mix(in srgb, blue 75%, white);
+    position: flex;
+}
+
+
+
+/* Grid Layout */
+.recordings {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1cm;
+    width: 10vh;
+    position: relative;
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+    .nav-list li {
+        display: block;
+        margin-bottom: 3mm;
+        margin-top: 3mm;
+        margin-left: 3mm;
+        margin-right: 3mm;
+    }
+    .recordings {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Pseudo-classes and other selectors */
+li:hover {
+    color: orange; /* example of color name */
+}
+
+:active {
+    color: purple;
+}
+
+/* Use of CSS variables with fallback */
+:root {
+    --main-bg-color: #fdfdfd;
+    --main-text-color: #333;
+}
+
+body {
+    background-color: var(--main-bg-color, white);
+    color: var(--main-text-color, black);
+}
+
+/* Applying new CSS selectors */
+footer:hover {
+    background-color: color-mix(in srgb, red 50%, blue 50%);
+}
+
+/* Grid */
+.contribution-form {
+    display: grid;
+    justify-items: center;
+    column-gap: 100px;
+    row-gap: 100px;
+}
+
+/* Font */
+@font-face {
+    font-family: "WeirdFont";
+    src: url(assets/fonts/JacquardaBastarda9Charted-Regular.ttf)
+}
+
+.unfinished {
+    font-family: "WeirdFont";
+}
+
+/* Descendant Selector */
+fieldset legend {
+    font-size: 1.5em;
+}
+
+/* Child Selector */
+fieldset > label {
+    color: green
+}
+
+/* Adjacent Sibling Selector */
+ul + h3 {
+    font-size: 2em
+}
+
+/* General Sibling Selector */
+video ~ audio {
+    width: 1000px;
+}
+
+/* Combining Selectors */
+ol.nav-list {
+    font-family: "WeirdFont";
+}
+
+/* has */
+section:has(details) {
+    background-color: red;
+}
+
+/* Nested Selectors */
+.meeting-details {
+    /* parent rule properties */
+    background-color: whitesmoke;
+    .date {
+        /* child rule properties */
+        color: rgb(34, 201, 238);
+    }
+}
