@@ -76,7 +76,7 @@ a[href*="youtube"] {
 .agenda, .attendees, .notes {
     display: flex;
     flex-direction: column;
-    color: color(srgb 2 0.5 0.5);
+    color: color(display-p3 1 0.5 0 / .5);
     font-size: 1.5em;
 }
 
@@ -84,7 +84,7 @@ a[href*="youtube"] {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    color: color-mix(srgb, blue 75%, white);
+    color: color-mix(in srgb, blue 75%, white);
     position: sticky;
 }
 
